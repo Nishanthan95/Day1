@@ -1,0 +1,30 @@
+HTTP 1.1 Vs HTTP 2
+HTTP 
+HTTP (Hypertext Transfer Protocol) is foundation of World Wide Web. It’s developed by Tim Berners-Lee and his team between 1989-1991. HTTP is application layer protocol designed to transfer information between network device and another layer of network protocol.
+HTTP 1.1
+HTTP 1.1, standardized in 1997, has served as the backbone of the World Wide Web for decades. However, as web technologies advanced and internet usage surged, certain limitations of HTTP 1.1 became apparent, primarily concerning performance and efficiency.
+Key Features of HTTP 1.1
+Single Request-Response Paradigm: In HTTP 1.1, each request from the client typically initiates a single response from the server. This means that multiple resources required to render a web page, such as HTML, CSS, JavaScript, and images, are fetched sequentially, leading to potential latency issues and slower page load times.
+Head-of-Line Blocking: One of the significant drawbacks of HTTP 1.1 is head-of-line blocking. If a resource requested by the client is delayed or blocked, subsequent requests are also held up, resulting in a phenomenon known as the "head-of-line blocking" problem.
+Text-Based Protocol: HTTP 1.1 relies on textual representations of data, which can lead to inefficiencies in parsing and transmitting information, especially for large payloads.
+
+HTTP 2
+In response to the shortcomings of HTTP 1.1, HTTP 2 was developed to address the modern web's demands for speed, efficiency, and enhanced user experience. Released in 2015, HTTP 2 introduces several groundbreaking features aimed at optimizing performance and reducing latency.
+
+
+
+Key Features of HTTP 2
+Multiplexing: HTTP 2 introduces multiplexing, allowing multiple requests and responses to be sent and received simultaneously over a single TCP connection. This eliminates the need for multiple connections per origin, significantly reducing latency and improving overall efficiency.
+Binary Protocol: Unlike HTTP 1.1, which is text-based, HTTP 2 employs a binary protocol for transmitting data between clients and servers. This binary framing enables more efficient parsing and serialization of data, resulting in faster and more reliable communication.
+Header Compression: HTTP 2 utilizes header compression techniques, such as HPACK, to reduce overhead and minimize the size of header fields exchanged between clients and servers. By compressing headers, HTTP 2 further enhances performance and optimizes bandwidth utilization.
+Server Push: Another notable feature of HTTP 2 is server push, which allows servers to proactively send resources to clients before they are requested. This preemptive approach to resource delivery can significantly improve page load times by eliminating the need for additional round trips between the client and server.
+
+HTTP 1.1 Vs HTTP 2
+HTTP 1.1	HTTP 2
+Single request per connection	Multiplexing allows multiple requests per connection
+Head of line Present	Head of line Eliminated due to multiplexing
+Protocol Text-based	Protocol Binary
+
+
+
+
